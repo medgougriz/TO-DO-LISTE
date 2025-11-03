@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>TO DO LISTE  </title>
+    <title>TO DO LISTE </title>
 </head>
+
 <body>
     <div class="container">
         <div class="head">
             <label>user information</label>
-            <input placeholder="add your Full-name"  id="username" type="text">
+            <input placeholder="add your Full-name" id="username" type="text">
 
             <label> Add Your Task</label>
             <input placeholder="Titile task" id="title" type="text">
-            <textarea  placeholder="discription task" id="discription"></textarea>
-           
+            <textarea placeholder="discription task" id="discription"></textarea>
+
             <select id="status">
                 <option value="doing">doing</option>
                 <option value="todo">todo</option>
                 <option value="done">done</option>
             </select>
-            <button onclick="CreateTask()" >Create Task</button>
+            <button onclick="CreateTask()">Create Task</button>
         </div>
-        
+        <div class="output">
+            <table>
+                <tr>
+                    <th>Full-name</th>
+                    <th>title</th>
+                    <th>discription</th>
+                    <th>status</th>
+                    <th>upload</th>
+                    <th>delete</th>
+                </tr>
+                <tbody>
+                    <tr>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td><button>upload</button></td>
+                    <td><button>delete</button></td>
+                    </tr>
+                     <tr>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td>ahmad</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 
     </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>

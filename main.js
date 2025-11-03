@@ -4,12 +4,12 @@ var dataBase = []
 function CreateTask(){
     var task =  {
         fullName: document.getElementById('username').value,
-        title: 'sdfs',
-        decrirtion: 'sdfsdfsdfwf ewr',
-        status: 'to do',
+        title: document.getElementById('title').value,
+        desrirtion: document.getElementById('discription').value,
+        status: document.getElementById('status').value,
         createdAt: Date.now()
     }
 
-    dataBase[length] = task
+    dataBase[dataBase.length] = task
     console.log(dataBase);
 }
