@@ -5,6 +5,7 @@
     body{
         width: 80%;
         margin: auto;
+        background-color: antiquewhite;
         .head{
             label{
                 text-transform: capitalize;
@@ -15,7 +16,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 39vh;
         }
     }
 }
@@ -25,6 +25,7 @@ table{
 
 }
 button{
+    margin: 10px 0;
     color:white;
     height: 30px;
     width: 100px;
@@ -38,4 +39,16 @@ button{
 button:hover{
     background-color: rgb(67, 87, 221);
     letter-spacing: 1px;
+}
+input,#status{
+    height: 30px;
+    width: 40%;
+}
+#discription{
+    height: 80px;
+    width: 40%;
+}
+
+#status{
+    text-transform: capitalize;
 }

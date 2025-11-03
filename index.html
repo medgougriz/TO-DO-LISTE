@@ -23,7 +23,7 @@
                 <option value="todo">todo</option>
                 <option value="done">done</option>
             </select>
-            <button onclick="CreateTask()">Create Task</button>
+            <button onclick="CreateTask()" id="Create">Create Task</button>
         </div>
         <div class="output">
             <table>
@@ -32,26 +32,11 @@
                     <th>title</th>
                     <th>discription</th>
                     <th>status</th>
+                    <th>date</th>
                     <th>upload</th>
                     <th>delete</th>
                 </tr>
-                <tbody>
-                    <tr>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td><button>upload</button></td>
-                    <td><button>delete</button></td>
-                    </tr>
-                     <tr>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td>ahmad</td>
-                    <td><button id="update">update</button></td>
-                    <td><button id="delete">delete</button></td>
-                    </tr>
+                <tbody id="see">
                 </tbody>
             </table>
         </div>
