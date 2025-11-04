@@ -2,7 +2,8 @@ let UserName = document.getElementById('username').value ;
 let title = document.getElementById('title').value;
 let discription = document.getElementById('discription').value;
 let status = document.getElementById('status').value;
-
+let UT = 'create'
+let O ;
 
 
 // 2 localStorage
@@ -22,11 +23,18 @@ function CreateTask(){
         status: document.getElementById('status').value,
         createdAt: new Date().toLocaleString()
     }
-    dataBase[dataBase.length] = task
+    if(UT === 'create'){
+        dataBase[dataBase.length] = task
+    }
+    else{
+        dataBase[O] = task
+        UT = 'create'
+        document.getElementById('Create').innerHTML= 'Create'
+
+    }
     // local storage
     localStorage.setItem('todo', JSON.stringify(dataBase))
     seetodo ()
-    console.log(dataBase);
 
     cleardata()
 }
@@ -48,7 +56,7 @@ function seetodo (){
         table += `<tr>
                     <td>${dataBase[i].fullName}</td>
                     <td>${dataBase[i].title}</td>
-                    <td>${dataBase[i].discription}</td>
+                    <td>${dataBase[i].desrirtion}</td>
                     <td>${dataBase[i].status}</td>
                     <td>${dataBase[i].createdAt}</td>
                     <td><button onclick="updaTe(${i})"id="update">update</button></td>
@@ -78,4 +86,10 @@ function updaTe(i){
     document.getElementById('discription').value = dataBase[i].discription
     document.getElementById('status').value = dataBase[i].status
     document.getElementById('Create').innerHTML= 'Update'
+    UT = 'Update'
+    O = i
+    scroll({
+        top:0,behavior:"smooth"
+    })
+
 }
