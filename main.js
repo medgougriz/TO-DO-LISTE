@@ -23,7 +23,9 @@ function CreateTask(){
         status: document.getElementById('status').value,
         createdAt: new Date().toLocaleString()
     }
-    if(UT === 'create'){
+
+    if(document.getElementById('username').value !==''&& document.getElementById('title').value!==''&& document.getElementById('status').value!==''){
+        if(UT === 'create'){
         dataBase[dataBase.length] = task
     }
     else{
@@ -32,6 +34,9 @@ function CreateTask(){
         document.getElementById('Create').innerHTML= 'Create'
 
     }
+    }
+    
+    
     // local storage
     localStorage.setItem('todo', JSON.stringify(dataBase))
     seetodo ()
@@ -83,7 +88,7 @@ function updaTe(i){
 
     document.getElementById('username').value = dataBase[i].fullName
     document.getElementById('title').value = dataBase[i].title
-    document.getElementById('discription').value = dataBase[i].discription
+    document.getElementById('discription').value = dataBase[i].desrirtion
     document.getElementById('status').value = dataBase[i].status
     document.getElementById('Create').innerHTML= 'Update'
     UT = 'Update'
